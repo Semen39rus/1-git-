@@ -1,6 +1,5 @@
 User@DESKTOP-7R6GJ3H MINGW64 ~ (main)
 $ mkdir 20ISP3
-
 User@DESKTOP-7R6GJ3H MINGW64 ~ (main)
 $ cd !$
 cd 20ISP3
@@ -10,7 +9,6 @@ $ mkdir TSD
 
 User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3 (main)
 $ cd TSD
-
 User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
 $ git config user.name 'Semyon'
 
@@ -30,47 +28,55 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   my_first_file.txt
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
-$ git commit -m "comment"
-[master (root-commit) 1c48f1f] comment
- 1 file changed, 1 insertion(+)
- create mode 100644 my_first_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git commit -m "One commit"
+[main (root-commit) 8a8030c] One commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 20ISP3/TSD/my_first_file.txt
 
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
-$ git clean -df
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
-$ git remote add origin git@github.com:Semen39rus/1-git-.git
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git log
+commit 8a8030ca559b9fe9cd99305adc9bc839493d0925 (HEAD -> main)
+Author: Semyon <semacvolko@gmail.com>
+Date:   Fri Mar 11 11:08:47 2022 +0200
 
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
-$ git remote -v
-origin  git@github.com:Semen39rus/1-git-.git (fetch)
-origin  git@github.com:Semen39rus/1-git-.git (push)
+    One commit
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add my_first_file.txt
 
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
-$ git push -u github master
-fatal: 'github' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
-$ touch my_second_file.txt
-
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
-$ git add my_second_file.txt
-
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
 $ git status
-On branch master
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
+        modified:   my_first_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ touch my_second_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add my_second_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   my_first_file.txt
         new file:   my_second_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git commit -m "two commit"
+[main 23f67dd] two commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 20ISP3/TSD/my_second_file.txt
 
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git log
+commit 23f67ddf1884764a19bcfccec4eeea3cc1f14172 (HEAD -> main)
+Author: Semyon <semacvolko@gmail.com>
+Date:   Fri Mar 11 11:11:24 2022 +0200
 
-User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
-$ git push -u github master
-fatal: 'github' does not appear to be a git repository
-fatal: Could not read from remote repository.
+    two commit
 
-Please make sure you have the correct access rights
-and the repository exists.
+commit 8a8030ca559b9fe9cd99305adc9bc839493d0925
+Author: Semyon <semacvolko@gmail.com>
+Date:   Fri Mar 11 11:08:47 2022 +0200
+
+    One commit
