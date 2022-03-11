@@ -1,0 +1,76 @@
+User@DESKTOP-7R6GJ3H MINGW64 ~ (main)
+$ mkdir 20ISP3
+
+User@DESKTOP-7R6GJ3H MINGW64 ~ (main)
+$ cd !$
+cd 20ISP3
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3 (main)
+$ mkdir TSD
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3 (main)
+$ cd TSD
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git config user.name 'Semyon'
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git config user.email semacvolko@gmail.com
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ touch my_first_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git add my_first_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (main)
+$ git status
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   my_first_file.txt
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ git commit -m "comment"
+[master (root-commit) 1c48f1f] comment
+ 1 file changed, 1 insertion(+)
+ create mode 100644 my_first_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ git clean -df
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ git remote add origin git@github.com:Semen39rus/1-git-.git
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ git remote -v
+origin  git@github.com:Semen39rus/1-git-.git (fetch)
+origin  git@github.com:Semen39rus/1-git-.git (push)
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ git push -u github master
+fatal: 'github' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ touch my_second_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ git add my_second_file.txt
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   my_second_file.txt
+
+
+User@DESKTOP-7R6GJ3H MINGW64 ~/20ISP3/TSD (master)
+$ git push -u github master
+fatal: 'github' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
